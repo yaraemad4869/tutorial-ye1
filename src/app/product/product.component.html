@@ -1,0 +1,22 @@
+<div>
+    <!-- <div class=" card col-lg-4" style="width: 250px;"> -->
+
+    <div class="form-control">
+        <div class="card col-lg-4" *ngFor="let product of allProducts" style="width: 200px">
+            <a [routerLink]="['/productdetails',product.id]">
+                <img src="{{product.image}}" class="card-img-top" alt="..." />
+            </a>
+            <div class="card-body">
+                <h4 class="card-title">{{product.title}}</h4>
+                <p class="card-text">
+                    {{product.description}}
+                </p>
+                <!-- <a href="#" class="btn btn-warning">show/hide details</a> -->
+                <a href="#" class="btn btn-primary">Add to cart</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
