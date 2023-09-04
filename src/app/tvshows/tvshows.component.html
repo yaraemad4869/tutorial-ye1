@@ -1,0 +1,39 @@
+<div class="row mt-5 ">
+    <div class="col-lg-12">
+        <button class="btn btn-outline-danger my-2 my-sm-0 float-end" (click)="changeLanguage()">
+            {{ language }}
+        </button>
+    </div>
+</div>
+
+
+<div class="row">
+    <mat-paginator [length]="totalTVShows" [pageSize]="pageSize" aria-label="Select page" (page)="changePage($event)">
+    </mat-paginator>
+</div>
+
+
+<div class="row mt-5 w-75">
+    <input type="text" placeholder="Search" class="form-control" [(ngModel)]="setSearchValue" />
+</div>
+
+
+<div class="row mt-4">
+    <div class="card col-lg-4 mx-2" *ngFor="let show of allTVShows" style="width: 250px">
+
+        <a [routerLink]="['/showdetails', show.id]">
+            <img src="{{ imagePath + show.poster_path }}" class="card-img-top" alt="..." />
+        </a>
+        <div class="card-body">
+            <h5 class="card-title">{{ show.name }}</h5>
+            <p class="card-text" *ngIf="show.showDetails">
+                {{ show.overview }}
+            </p>
+            <!-- <a href="#" class="btn btn-warning">show/hide details</a> -->
+            <button class="btn btn-danger">Watch</button>
+            <!-- <button class="btn btn-success" (click)="toggleDescription(show.id)">
+                {{ show.showDetails ? "Hide" : "Show" }}Details
+            </button> -->
+        </div>
+    </div>
+</div>
