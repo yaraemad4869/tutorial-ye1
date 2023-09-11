@@ -1,0 +1,10 @@
+.toooot {
+    width: 60px;
+    cursor: pointer;
+    outline: none;
+}
+
+.nav-link {
+    color: white;
+    font-size: large;
+}

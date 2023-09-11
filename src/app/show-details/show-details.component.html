@@ -1,0 +1,26 @@
+<div class="movie-ticket">
+    <div class="container-fluid">
+        <div class="ui-item">
+            <div class="ui-head" style="border: white; border-style: solid;">
+                <div class="ui-trans clearfix"
+                    style="border-radius: 2%; width: 90%; background-color: rgba(255, 0, 0, 0); ">
+                    <div class="container-fluid card-img-top">
+                        <img src="{{ imagePath + selectedshow.poster_path }}" class="card-img-top my-3"
+                            style="width: 20%;height: 30%; border-radius: 2%;" alt="..." />
+                    </div>
+                </div>
+                <div class="ui-details my-3 mx-3" style="color: white; font-size: medium;">
+                    <h2 style="font-weight: bolder; font-size: larger;">
+                        {{ selectedshow?.name }}
+                    </h2>
+
+                    <p>
+                        {{ selectedshow?.overview }}
+                    </p>
+                    <button class="btn btn-danger" type="button">Watch</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
